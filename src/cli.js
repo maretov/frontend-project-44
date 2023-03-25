@@ -5,4 +5,12 @@ const getUserName = () => {
   return userName;
 };
 
-export default getUserName;
+const sayWelcome = () => {
+  console.log('Welcome to the Brain Games!');
+};
+
+const sayHello = (userName) => {
+  console.log(`Hello, ${userName}!`);
+};
+
+export { getUserName, sayWelcome, sayHello };
