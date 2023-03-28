@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 
-const showExpression = (expression) => {
-  console.log(`Question: ${expression}`);
+const showExercise = (exercise) => {
+  console.log(`Question: ${exercise}`);
 };
 
 const getUserAnswer = () => {
@@ -9,7 +9,7 @@ const getUserAnswer = () => {
   return userAnswer;
 };
 
-const compareAnswers = (correctAnswer, userAnswer) => correctAnswer === +userAnswer;
+const compareAnswers = (correctAnswer, userAnswer) => correctAnswer === userAnswer;
 
 const failFinish = (correctAnswer, userAnswer) => {
   console.log(`'${userAnswer}' is wrong answer ;(. Correct answer is '${correctAnswer}'.`);
@@ -27,4 +27,4 @@ const successFinish = (countCorrectAnswers, roundsCount, userName) => {
   }
 };
 
-export { showExpression, getUserAnswer, compareAnswers, failFinish, sayCorrect, successFinish };
+export { showExercise, getUserAnswer, compareAnswers, failFinish, sayCorrect, successFinish };

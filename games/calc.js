@@ -1,4 +1,4 @@
-import { getUserName, sayHello, sayWelcome } from "../src/cli.js";
+import { sayWelcome, getUserName, sayHello } from "../src/cli.js";
 import { showExpression, getUserAnswer, compareAnswers, failFinish, sayCorrect, successFinish } from "../src/index.js";
 
 const startGameCalc = (roundsCount) => {
@@ -16,8 +16,6 @@ const startGameCalc = (roundsCount) => {
     const secondRandomNumber = Math.floor(Math.random() * 10);
     const expression = `${firstRandomNumber} ${operators[countCorrectAnswers]} ${secondRandomNumber}`;
 
-    showExpression(expression);
-
     let correctAnswer;
     switch (operators[countCorrectAnswers]) {
       case '+':
@@ -33,7 +31,8 @@ const startGameCalc = (roundsCount) => {
         break;
     }
 
-    const userAnswer = getUserAnswer();
+    showExercise(expression);
+    const userAnswer = +getUserAnswer();
     const isCorrectAnswer = compareAnswers(correctAnswer, userAnswer);
 
     if (!isCorrectAnswer) {
