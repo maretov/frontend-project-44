@@ -23,7 +23,7 @@ const successFinish = (countCorrectAnswers, roundsCount, userName) => {
   if (countCorrectAnswers === roundsCount) {
     console.log(`Congratulations, ${userName}!`);
   } else {
-    console.log(`Let's try again, ${userName}`);
+    console.log(`Let's try again, ${userName}!`);
   }
 };
 
