@@ -6,11 +6,11 @@
 ### How to install package:
 https://asciinema.org/a/VOQoYvnW8uDKerv18HRpEaauN
 
-#### How to work game brain-even:
+How to work game brain-even:\n
 https://asciinema.org/a/1px3DGYpzW8xZ5cosZgFGOi3c
 
-#### How to work game brain-calc:
+How to work game brain-calc:\n
 https://asciinema.org/a/76i3vQU0nbV1uNJKFC1vukg9Q
 
-#### How to work game brain-cgd:
+How to work game brain-cgd:\n
 https://asciinema.org/a/tQgHr310sKBxhEoDP7IFHal6j
