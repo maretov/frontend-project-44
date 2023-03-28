@@ -17,3 +17,6 @@ https://asciinema.org/a/tQgHr310sKBxhEoDP7IFHal6j
 
 How to work game brain-progression:  
 https://asciinema.org/a/Vb7jd2Mf0NLGyPY3NZ9OehscC
+
+How to work game brain-prime:  
+https://asciinema.org/a/GSAMZG5FEJpj8M48JpJUpwbXE
