@@ -11,3 +11,6 @@ https://asciinema.org/a/1px3DGYpzW8xZ5cosZgFGOi3c
 
 #### How to work game brain-calc:
 https://asciinema.org/a/76i3vQU0nbV1uNJKFC1vukg9Q
+
+#### How to work game brain-cgd:
+https://asciinema.org/a/tQgHr310sKBxhEoDP7IFHal6j
