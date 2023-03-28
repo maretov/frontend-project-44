@@ -1,5 +1,12 @@
-import { sayWelcome, getUserName, sayHello } from "../src/cli.js";
-import { showExpression, getUserAnswer, compareAnswers, failFinish, sayCorrect, successFinish } from "../src/index.js";
+import { sayWelcome, getUserName, sayHello } from '../src/cli.js';
+import {
+  showExercise,
+  getUserAnswer,
+  compareAnswers,
+  sayCorrect,
+  failFinish,
+  successFinish,
+} from '../src/index.js';
 
 const startGameCalc = (roundsCount) => {
   let countCorrectAnswers = 0;
@@ -30,9 +37,10 @@ const startGameCalc = (roundsCount) => {
       default:
         break;
     }
+    correctAnswer = correctAnswer.toString();
 
     showExercise(expression);
-    const userAnswer = +getUserAnswer();
+    const userAnswer = getUserAnswer();
     const isCorrectAnswer = compareAnswers(correctAnswer, userAnswer);
 
     if (!isCorrectAnswer) {
@@ -46,4 +54,4 @@ const startGameCalc = (roundsCount) => {
   successFinish(countCorrectAnswers, roundsCount, userName);
 };
 
-export { startGameCalc };
+export default startGameCalc;

@@ -1,5 +1,12 @@
-import { sayWelcome, getUserName, sayHello } from "../src/cli.js";
-import { showExercise, getUserAnswer, compareAnswers, failFinish, sayCorrect, successFinish } from "../src/index.js";
+import { sayWelcome, getUserName, sayHello } from '../src/cli.js';
+import {
+  showExercise,
+  getUserAnswer,
+  compareAnswers,
+  sayCorrect,
+  failFinish,
+  successFinish,
+} from '../src/index.js';
 
 const startGameEven = (roundsCount) => {
   let countCorrectAnswers = 0;
@@ -35,4 +42,4 @@ const startGameEven = (roundsCount) => {
   successFinish(countCorrectAnswers, roundsCount, userName);
 };
 
-export { startGameEven };
+export default startGameEven;

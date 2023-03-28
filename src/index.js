@@ -11,13 +11,13 @@ const getUserAnswer = () => {
 
 const compareAnswers = (correctAnswer, userAnswer) => correctAnswer === userAnswer;
 
+const sayCorrect = () => {
+  console.log('Correct!');
+};
+
 const failFinish = (correctAnswer, userAnswer) => {
   console.log(`'${userAnswer}' is wrong answer ;(. Correct answer is '${correctAnswer}'.`);
 };
-
-const sayCorrect = () => {
-  console.log('Correct!');
-}
 
 const successFinish = (countCorrectAnswers, roundsCount, userName) => {
   if (countCorrectAnswers === roundsCount) {
@@ -27,4 +27,11 @@ const successFinish = (countCorrectAnswers, roundsCount, userName) => {
   }
 };
 
-export { showExercise, getUserAnswer, compareAnswers, failFinish, sayCorrect, successFinish };
+export {
+  showExercise,
+  getUserAnswer,
+  compareAnswers,
+  sayCorrect,
+  failFinish,
+  successFinish,
+};
