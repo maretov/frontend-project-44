@@ -11,7 +11,7 @@ const startGame = (instruction, generateRoundData) => {
 
   let correctAnswersCount = 0;
   for (; correctAnswersCount < roundsCount; correctAnswersCount += 1) {
-    const roundData = generateRoundData(correctAnswersCount);
+    const roundData = generateRoundData();
 
     const question = roundData[0];
     const correctAnswer = roundData[1];

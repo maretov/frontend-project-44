@@ -2,7 +2,7 @@ import startGame from '../index.js';
 
 const instruction = 'What number is missing in the progression?';
 
-const generateRoundData = (roundNumber) => { // eslint-disable-line no-unused-vars
+const generateRoundData = () => {
   const progressionStep = Math.floor(Math.random() * 10 + 3);
   const progression = [];
   progression[0] = Math.floor(Math.random() * 100);

@@ -2,7 +2,7 @@ import startGame from '../index.js';
 
 const instruction = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const generateRoundData = (roundNumber) => { // eslint-disable-line no-unused-vars
+const generateRoundData = () => {
   const randomNumber = Math.floor(Math.random() * 100);
 
   let correctAnswer;
