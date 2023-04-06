@@ -1,6 +1,4 @@
 #!/usr/bin/env node
-import startGameProgression from '../games/progression.js';
+import startGame from '../src/games/progression.js';
 
-const roundsCount = 3;
-
-startGameProgression(roundsCount);
+startGame();

@@ -1,6 +1,4 @@
 #!/usr/bin/env node
-import startGameEven from '../games/even.js';
+import startGame from '../src/games/even.js';
 
-const roundsCount = 3;
-
-startGameEven(roundsCount);
+startGame();
