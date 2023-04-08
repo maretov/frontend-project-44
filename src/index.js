@@ -11,10 +11,7 @@ const startGame = (instruction, generateRoundData) => {
 
   let correctAnswersCount = 0;
   for (; correctAnswersCount < roundsCount; correctAnswersCount += 1) {
-    const roundData = generateRoundData();
-
-    const question = roundData[0];
-    const correctAnswer = roundData[1];
+    const [question, correctAnswer] = generateRoundData();
 
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
@@ -23,15 +20,13 @@ const startGame = (instruction, generateRoundData) => {
     if (!isCorrectAnswer) {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer is '${correctAnswer}'.`);
       console.log(`Let's try again, ${userName}!`);
-      break;
+      return;
     }
 
     console.log('Correct!');
   }
 
-  if (correctAnswersCount === roundsCount) {
-    console.log(`Congratulations, ${userName}!`);
-  }
+  console.log(`Congratulations, ${userName}!`);
 };
 
 export default startGame;

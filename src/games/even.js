@@ -1,18 +1,15 @@
 import startGame from '../index.js';
+import getRandomNumber from '../utils.js';
 
 const instruction = 'Answer "yes" if the number is even, otherwise answer "no".';
 
+const isEven = (num) => num % 2 === 0;
+
 const generateRoundData = () => {
-  const randomNumber = Math.floor(Math.random() * 100);
+  const num = getRandomNumber(1, 100);
+  const correctAnswer = isEven(num) ? 'yes' : 'no';
 
-  let correctAnswer;
-  if (randomNumber % 2 === 0) {
-    correctAnswer = 'yes';
-  } else {
-    correctAnswer = 'no';
-  }
-
-  return [randomNumber, correctAnswer];
+  return [num, correctAnswer];
 };
 
 const startGameEven = () => startGame(instruction, generateRoundData);

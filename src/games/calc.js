@@ -1,29 +1,34 @@
 import startGame from '../index.js';
+import getRandomNumber from '../utils.js';
 
 const instruction = 'What is the result of the expression?';
 
-const generateRoundData = (roundNumber) => {
+const getRandomOperator = () => {
   const operators = ['+', '-', '*'];
   const randomIndex = Math.floor(Math.random() * operators.length);
-  const firstRandomNumber = Math.floor(Math.random() * 10);
-  const secondRandomNumber = Math.floor(Math.random() * 10);
-  const question = `${firstRandomNumber} ${operators[randomIndex]} ${secondRandomNumber}`;
+  return operators[randomIndex];
+};
 
-  let correctAnswer;
-  switch (operators[randomIndex]) {
+const calcExpression = (firstNum, secondNum, operator) => {
+  switch (operator) {
     case '+':
-      correctAnswer = firstRandomNumber + secondRandomNumber;
-      break;
+      return firstNum + secondNum;
     case '-':
-      correctAnswer = firstRandomNumber - secondRandomNumber;
-      break;
+      return firstNum - secondNum;
     case '*':
-      correctAnswer = firstRandomNumber * secondRandomNumber;
-      break;
+      return firstNum * secondNum;
     default:
-      console.log(`Error! Swith expession is '${operators[roundNumber]}'`);
+      throw new Error(`Unknown operator: '${operator}'!`);
   }
-  correctAnswer = correctAnswer.toString();
+};
+
+const generateRoundData = () => {
+  const firstNum = getRandomNumber(1, 100);
+  const secondNum = getRandomNumber(1, 100);
+  const operator = getRandomOperator();
+
+  const question = `${firstNum} ${operator} ${secondNum}`;
+  const correctAnswer = calcExpression(firstNum, secondNum, operator).toString();
 
   return [question, correctAnswer];
 };
