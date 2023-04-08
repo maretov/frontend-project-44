@@ -21,8 +21,7 @@ const generateRoundData = () => {
 
   const progression = getProgression(progressionLength);
 
-  const hiddenNum = progression[hiddenPosition];
-  const correctAnswer = hiddenNum.toString();
+  const correctAnswer = String(progression[hiddenPosition]);
   progression[hiddenPosition] = '..';
 
   const expression = progression.join(' ');

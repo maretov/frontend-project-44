@@ -28,7 +28,7 @@ const generateRoundData = () => {
   const operator = getRandomOperator();
 
   const question = `${firstNum} ${operator} ${secondNum}`;
-  const correctAnswer = calcExpression(firstNum, secondNum, operator).toString();
+  const correctAnswer = String(calcExpression(firstNum, secondNum, operator));
 
   return [question, correctAnswer];
 };

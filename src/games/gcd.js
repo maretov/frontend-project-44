@@ -20,7 +20,7 @@ const generateRoundData = () => {
   const secondNum = getRandomNumber(1, 100);
 
   const expression = `${firstNum} ${secondNum}`;
-  const correctAnswer = getGreatestCommonDivisor(firstNum, secondNum).toString();
+  const correctAnswer = String(getGreatestCommonDivisor(firstNum, secondNum));
 
   return [expression, correctAnswer];
 };
